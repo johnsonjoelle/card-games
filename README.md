@@ -1,12 +1,12 @@
-# React + Vite
+# Card Games
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
+This project is intended to be a long term personal project to recreate multiple card games in a React environment.
 
-Currently, two official plugins are available:
+## Project Setup
+Cards and Decks will be built dynamically to be used in the running card games.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## List of Games
+Blackjack (Single player) - To be refactored into a React environment
+Solitaire - Plan to add
+Other games to come
