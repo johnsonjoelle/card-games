@@ -1,8 +1,57 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+header {
+  --_bg-color: var(--deco-black);
+  padding: 8px 16px;
+  background-color: var(--_bg-color);
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 44px;
+}
+header .logo img {
+  width: 44px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 16px;
+}
+.nav-link {
+  position: relative;
+}
+.nav-link a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+.nav-link a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 3px;
+  width: 0;
+  border-radius: 0 3px 3px 0;
+  background-color: var(--deco-gold);
+  transition: width 450ms;
+}
+.nav-link:hover a,
+.nav-link:focus-visible a,
+.nav-link a.active {
+  color: var(--deco-gold);
+}
+.nav-link:hover a::after,
+.nav-link:focus-visible a::after {
+  width: 100%;
 }
 
 
