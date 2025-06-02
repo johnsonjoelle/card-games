@@ -1,3 +1,4 @@
+/* Header & Navigation */
 header {
   --_bg-color: var(--deco-black);
   padding: 8px 16px;
@@ -54,4 +55,10 @@ header .logo img {
   width: 100%;
 }
 
-
+/* Common Page Styles */
+.page-container {
+  padding: 36px 16px;
+}
+.page-header {
+  margin: 8px 0 24px;
+}
