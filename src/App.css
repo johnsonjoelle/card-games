@@ -9,6 +9,8 @@ header {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  overflow-x: clip;
 }
 header .logo {
   display: flex;
@@ -25,6 +27,9 @@ header .logo img {
   justify-content: space-between;
   list-style: none;
   gap: 16px;
+}
+.nav-dropdown-link {
+  display: none;
 }
 .nav-link {
   position: relative;
@@ -61,4 +66,26 @@ header .logo img {
 }
 .page-header {
   margin: 8px 0 24px;
+}
+
+@media screen and (max-width: 640px) {
+  .nav-dropdown-link {
+    display: block;
+  }
+  .nav.nav-primary {
+    position: absolute;
+    flex-direction: column;
+    background-color: var(--_bg-color);
+    border-top: 2px solid white;
+    border-radius: 0 0 0 6%;
+    right: 0;
+    top: 60px;
+    padding: 32px 16px;
+    width: 160px;
+    translate: 160px;
+    transition: translate 300ms ease-in-out;
+  }
+  .nav.nav-primary.open {
+    translate: 0;
+  }
 }

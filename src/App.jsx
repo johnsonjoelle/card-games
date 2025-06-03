@@ -12,6 +12,10 @@ import './App.css'
 import logo from './assets/card-logo.png';
 
 function App() {
+  const [navState, setNavState] = useState(false);
+  const handleNavState = () => {
+    setNavState(!navState);
+  }
 
   return (
     <Router>
@@ -20,7 +24,8 @@ function App() {
           <img src={logo} alt="" />
           <p>CardGames</p>
         </div>
-        <ul className="nav nav-primary">
+        <p className="nav-dropdown-link" onClick={handleNavState}>Menu</p>
+        <ul className={"nav nav-primary " + (navState ? "open" : "")}>
           <li className={"nav-link"}>
             <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>All Games</NavLink>
           </li>

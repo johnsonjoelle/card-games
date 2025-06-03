@@ -1,12 +1,14 @@
 /* Games List Page */
 .page-container.games-page {
+  --_deco-img-width: 250px;
   padding-left: 0;
   display: grid;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: var(--_deco-img-width) 1fr;
   gap: 24px;
 }
 .games-page-bg {
-  max-width: 250px;
+  max-width: var(--_deco-img-width);
+  align-self: center;
 }
 
 /* List of Games */
@@ -80,4 +82,16 @@
 
 .gamelist .card-container-outer:hover:not(.disabled) .play-message {
   opacity: 1;
+}
+
+@media screen and (max-width: 770px) {
+  .page-container.games-page {
+    display: block;
+  }
+  .games-page-bg {
+    display: none;
+  }
+  .gamelist-container {
+    margin-left: 16px ;
+  }
 }

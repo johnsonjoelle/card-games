@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GameCard from './GameCard';
 import games from './allgames.json';
 import './GamesList.css';
@@ -7,7 +7,11 @@ import deco from '../assets/deco-page-arrow.svg';
 const GamesList = () => {
   // variables
   const gamesArray = games.games;
-  gamesArray.push({name: "Coming Soon", player_count: "0P"})
+
+
+  if (!gamesArray.some(item => item.name === "Coming Soon")) {
+    gamesArray.push({name: "Coming Soon", player_count: "0P"});
+  }
 
   // methods
   const handleCardClick = (e) => {
