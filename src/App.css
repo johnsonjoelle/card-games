@@ -30,6 +30,11 @@ header .logo img {
 }
 .nav-dropdown-link {
   display: none;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
 }
 .nav-link {
   position: relative;

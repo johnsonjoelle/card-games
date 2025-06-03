@@ -1,22 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import GameCard from './GameCard';
 import games from './allgames.json';
 import './GamesList.css';
 import deco from '../assets/deco-page-arrow.svg';
 
 const GamesList = () => {
-  // variables
-  const gamesArray = games.games;
-
-
-  if (!gamesArray.some(item => item.name === "Coming Soon")) {
-    gamesArray.push({name: "Coming Soon", player_count: "0P"});
-  }
-
-  // methods
-  const handleCardClick = (e) => {
-    //go to page
-  }
+  const [gamesArray] = useState(() => [
+    ...(games?.games || []),
+    {name: "Coming Soon", player_count: "0P"}
+  ]);
 
   return (
     <div className='page-container games-page'>
@@ -25,7 +17,7 @@ const GamesList = () => {
         <h1 className='page-header'>All Card Games</h1>
         <div className="gamelist">
           {gamesArray.map((game, index) => (
-            <GameCard gameInfo={game} index={index} />
+            <GameCard key={game.name || index} gameInfo={game} />
           ))}
         </div>
       </section>
